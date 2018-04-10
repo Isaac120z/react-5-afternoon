@@ -14,11 +14,11 @@ class WizardFive extends Component {
           <p>Are you currently working with a real estate agent?</p> <br />
           <div className="row">
             <Link to="/wSix">
-              <button onClick={ () => updateAgent( true ) }>Yes</button>
+              <button onClick={ () => updateAgent("true") }>Yes</button>
             </Link>
 
             <Link to="/wSix">
-              <button onClick={ () => updateAgent( false ) }>No</button>
+              <button onClick={ () => updateAgent("false") }>No</button>
             </Link>
           </div>
         </div>
@@ -28,10 +28,10 @@ class WizardFive extends Component {
 }
 
 function mapStateToProps( state ) {
-  const { realEstateAgent } = state;
+  const { agent } = state;
 
   return {
-    realEstateAgent
+    agent
   };
 }
 
